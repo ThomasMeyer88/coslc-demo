@@ -18,6 +18,8 @@ import { DailyDevotionsComponent } from './daily-devotions/daily-devotions.compo
 import { StaffComponent } from './staff/staff.component';
 import { DonateComponent } from './donate/donate.component';
 import { ContactComponent } from './contact/contact.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ContactComponent } from './contact/contact.component';
     DailyDevotionsComponent,
     StaffComponent,
     DonateComponent,
-    ContactComponent
+    ContactComponent,
+    SignUpComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
