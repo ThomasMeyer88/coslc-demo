@@ -7,28 +7,53 @@
     background-color: $primarycolor
     align-items: center
     margin-top: 2rem
+    @media screen and (max-width: $bp-phone)
+        margin-top: 1rem
+
 
 
 img
     width: 225px
+    @media screen and (max-width: $bp-phone)
+        width: 50%
+        margin-left: 25%
+        margin-right: 25%
 
 @mixin headerbtn()
     @include row($float: right)
-    margin-top: 10px
-    height: 50px
+    margin-top: 15px
+    height: 45px
     text-align: center
     width: 80px
     font-size: $fontsize-secondary
     font-family: $fontstyle
-    font-color: $primarycolor
+    color: $secondarycolor
     font-weight: bold
 
 a
     @include headerbtn    
     padding-top: 7px
     margin-right: 1px
+    @media screen and (max-width: $bp-phone)
+        display: none
+
 
 .header-btn
     @include headerbtn()
+    color: $primarycolor
+    background-color: black
+    @media screen and (max-width: $bp-phone)
+        display: none
+
+.alt-btn
+    @include headerbtn()
+    color: $primarycolor
+    background-color: black
+    @media screen and (min-width: $bp-phone+1)
+        display: none
+    @media screen and (max-width: $bp-phone)
+        width: 50%
+        float: none
+        margin-left: 25%
 
     
