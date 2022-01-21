@@ -30,10 +30,11 @@ body
 @mixin main()
     @include primary-text($color: $secondarycolor)
     background-color: $primarycolor
-    width: 80%
+    width: 82%
+    height: 1000px
     padding: 0px
-    margin-left: 10%
-    margin-right: 10%
+    margin-left: 9%
+    margin-right: 9%
     font-family: $fontstyle
     font-size: $fontsize-primary
     display: block
@@ -53,3 +54,12 @@ body
 @mixin subheader()
     include secondary-text
     background-color: $secondarycolor
+
+@mixin column($w: 100%, $m: 0px, $p: 0px)
+    width: $w
+    margin: $m
+    padding: $p
+
+@mixin row($float: left)
+    display: inline-block
+    float: $float
