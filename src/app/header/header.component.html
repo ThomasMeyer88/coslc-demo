@@ -1,4 +1,18 @@
-<div class="header">
+<div class="header row">
     <img src="../../assets/img/church-logo.png">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+          <span>Disable alerts</span>
+        </button>
+    </mat-menu>
 </div>
 
