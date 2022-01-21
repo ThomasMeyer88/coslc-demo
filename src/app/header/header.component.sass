@@ -3,12 +3,32 @@
 .header
     @include column($w: 100%, $m: 0px, $p: 0px)
     @include row($float: left)
-    height: 60px
+    height: 70px
     background-color: $primarycolor
-    padding-top: 3%
-    padding-left: 5%
-    padding-right: 5%
+    align-items: center
+    margin-top: 2rem
+
 
 img
     width: 225px
+
+@mixin headerbtn()
+    @include row($float: right)
+    margin-top: 10px
+    height: 50px
+    text-align: center
+    width: 80px
+    font-size: $fontsize-secondary
+    font-family: $fontstyle
+    font-color: $primarycolor
+    font-weight: bold
+
+a
+    @include headerbtn    
+    padding-top: 7px
+    margin-right: 1px
+
+.header-btn
+    @include headerbtn()
+
     

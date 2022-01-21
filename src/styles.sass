@@ -4,6 +4,7 @@ $bgcolor: #f8f6f2
 $primarycolor: white
 $secondarycolor: #313131
 $alertcolor: f78da7
+$fontcolor: black
 $fontstyle: "Noto Sans", Arial, sans-serif
 $fontstyle-alt: Arial, sans-serif
 $fontsize-primary: 16px
@@ -28,21 +29,25 @@ $fontsize-secondary: 13px
 body
     @include body
 
-@mixin main()
-    @include primary-text($color: $secondarycolor)
-    background-color: $primarycolor
-    width: 82%
-    height: 1000px
-    padding: 0px
+@mixin content()
+    width: 75%
+    padding-left: 3.5%
+    padding-right: 3.5%
     margin-left: 9%
     margin-right: 9%
-    font-family: $fontstyle
-    font-size: $fontsize-primary
-    display: block
     @media screen and (max-width: 1199px)
         width: 100%
         padding: 0px
         margin: 0px
+
+@mixin main()
+    @include primary-text($color: $secondarycolor)
+    @include content()
+    background-color: $primarycolor
+    height: 1000px
+    font-family: $fontstyle
+    font-size: $fontsize-primary
+    display: block
 
 @mixin header()
     include primary-text
