@@ -43,9 +43,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
     if (n > slides.length) {this.slideIndex = 1}    
     if (n < 1) {this.slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
-        slides[i].setAttribute("display", "none");  
+      (slides[i] as HTMLElement).style.display = "none"
     }
-    slides[this.slideIndex-1].setAttribute("display", "inline-block");  
+    (slides[this.slideIndex-1] as HTMLElement).style.display = "inline-block";
     this.cdr.detectChanges();
   }
 
