@@ -1,16 +1,30 @@
 @import '../../styles'
 
+@mixin fontSettings
+    font-family: $fontstyle
+    text-align: center
+    padding: 1.25em 0 1.25em 0
+    line-height: 1.75em
+    margin-top: 0
+    font-size: $fontsize-primary
+    @media screen and (max-width: $bp-phone)
+        @include column($w: 85%, $m: 0px 2.5% 0px 2.5%, $p: 1.25em 5% 1.25em 5%)
+
 div
     @include column($w: 100%, $m: 0px, $p: 0px)
     display: inline-block
     margin-top: 2em
+    @media screen and (max-width: $bp-phone)
+        @include column($w: 90%, $m: 0px, $p: 0px)
+        margin: 4em 5% 0 5%
 
 .alert
-    @include column($w: 100%, $m: 0px, $p: 0em)
+    @include fontSettings
     background-color: $alertcolor
-    text-align: center
-    font-family: $fontstyle
-    font-size: $fontsize-primary
     color: black
-    padding: 1.25em 0 1.25em 0
-    line-height: 1.75em
+
+.watch
+    @include fontSettings
+    background-color: $secondarycolor
+    color: $primarycolor
+    font-weight: bolder
