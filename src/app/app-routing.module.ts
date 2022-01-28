@@ -11,10 +11,11 @@ import { DonateComponent } from './donate/donate.component';
 import { ContactComponent } from './contact/contact.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  // { path: 'home', component: HomeComponent},
-  // { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'watch', component: WatchLivestreamComponent },
   { path: 'listen', component: ListenLivestreamComponent },
   { path: 'join', component: JoinUsComponent },
