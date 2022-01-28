@@ -1,0 +1,16 @@
+@import '../../styles'
+
+div
+    @include column($w: 100%, $m: 0px, $p: 0px)
+    display: inline-block
+    margin-top: 2em
+
+.alert
+    @include column($w: 100%, $m: 0px, $p: 0em)
+    background-color: $alertcolor
+    text-align: center
+    font-family: $fontstyle
+    font-size: $fontsize-primary
+    color: black
+    padding: 1.25em 0 1.25em 0
+    line-height: 1.75em
