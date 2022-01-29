@@ -11,15 +11,20 @@
         margin-top: 0.875rem
 
 
-.headerImg, img
+.headerImg
     margin: 0
     padding: 0
     float: left
     width: 225px
     @media screen and (max-width: $bp-phone)
-        width: 50%
-        margin-left: 25%
-        margin-right: 25%
+        width: 60%
+        margin-left: 20%
+        margin-right: 20%
+        display: block
+        margin-bottom: 1em
+
+.headerImg > img
+    width: 100%
 
 
 @mixin headerbtn()
