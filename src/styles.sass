@@ -33,11 +33,12 @@ body
     @include body
 
 @mixin content()
-    width: 71%
+    width: 72%
     padding-left: 5%
     padding-right: 5%
-    margin-left: 9.5%
-    margin-right: 9.5%
+    margin-left: 9%
+    margin-right: 9%
+    padding-bottom: 4em
     @media screen and (max-width: $bp-tablet)
         width: 90%
         padding-left: 5%
@@ -53,7 +54,6 @@ body
     @include primary-text($color: $secondarycolor)
     @include content()
     background-color: $primarycolor
-    height: 1000px
     font-family: $fontstyle
     font-size: $fontsize-primary
     display: block
