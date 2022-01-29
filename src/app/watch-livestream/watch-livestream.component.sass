@@ -1,0 +1,27 @@
+@import '../../styles'
+
+@mixin watchWidth()
+    width: 85%
+    padding: 0 7.5% 0 7.5%
+div
+    @include subSectionDiv()
+
+p
+    @include subSectionP()
+
+iframe
+    @include watchWidth()
+    margin-top: 1.5em
+
+table
+    border-collapse: collapse
+    width: 100%
+    margin-top: 1.5em
+
+table tbody
+    border: solid 1px $tableBorderColor
+    border-width: 1px
+table td
+    border-right: solid 1px $tableBorderColor
+    font-size: 0.875rem
+    line-height: 1.75em

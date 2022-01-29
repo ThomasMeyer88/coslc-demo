@@ -9,6 +9,7 @@ export class WatchLivestreamComponent implements OnInit {
 
   constructor() { }
 
+  watchHeaderText = `Video Stream`
   ngOnInit(): void {
   }
 
