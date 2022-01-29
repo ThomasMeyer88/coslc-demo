@@ -17,7 +17,7 @@ $fs-header-med: 1.25rem
 
 a
     color: $linkColor
-    
+
 @mixin primary-text($color: $secondarycolor)
     color: $color
 
@@ -83,3 +83,19 @@ body
 @mixin row($float: left)
     display: inline-block
     float: $float
+
+.header
+    font-size: $fs-header-med
+
+@mixin subSectionDiv()
+    display: inline-block
+    @media screen and (max-width: $bp-phone)
+        width: 90%
+        margin: 0 5% 5em 5%
+        text-align: center
+        margin-top: 2.5em
+
+@mixin subSectionP()
+    margin-top: 2.5em
+    color: $secondarycolor
+    font-family: $fontstyle

@@ -1,16 +1,8 @@
 @import '../../styles'
 
 div
-    display: inline-block
-    @media screen and (max-width: $bp-phone)
-        width: 90%
-        margin: 0 5% 5em 5%
-        text-align: center
-    
+    @include subSectionDiv()
 
-.header
-    font-size: $fs-header-med
 p
-    margin-top: 2.5em
-    color: $secondarycolor
-    font-family: $fontstyle
+    @include subSectionP() 
+
