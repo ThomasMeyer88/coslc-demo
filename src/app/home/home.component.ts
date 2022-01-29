@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   
   watchText = `We invite you to join us online (Sunday at 10:30 AM) by watching our live stream or listening to our live broadcast.`
   
+  mainText = `Welcome to Christ Our Savior Lutheran Church. At Christ Our Savior we have a passion for living, sharing, and teaching the love of Christ with all people. We invite everyone in the San Antonio and surrounding areas to come and worship with us. Please join us in worship every Sunday at 10:30 AM.`
   ngOnInit(): void {
   }
 
