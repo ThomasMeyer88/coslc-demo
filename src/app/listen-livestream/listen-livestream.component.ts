@@ -9,6 +9,8 @@ export class ListenLivestreamComponent implements OnInit {
 
   constructor() { }
 
+  listenHeaderText = `Listen Live`;
+  
   ngOnInit(): void {
   }
 
