@@ -1,5 +1,12 @@
 @import '../../styles'
 
+.phoneButton
+    display: none
+    @media screen and (min-width: $bp-phone+1)
+        display: none
+    @media screen and (max-width: $bp-phone)
+        display: block
+
 .header
     @include column($w: 100%, $m: 0px, $p: 0px)
     @include row($float: left)
@@ -63,5 +70,23 @@ a
         width: 50%
         float: none
         margin-left: 25%
+
+::ng-deep.mat-menu-panel 
+    max-width: 100% !important
+    @media screen and (max-width: $bp-phone)
+        width: 100%
+
+.mat-menu-item
+    @media screen and (max-width: $bp-phone)
+        text-align: center !important
+    
+::ng-deep.cdk-overlay-connected-position-bounding-box
+    @media screen and (max-width: $bp-phone)
+        width: 100% !important
+
+::ng-deep.cdk-overlay-pane
+    @media screen and (max-width: $bp-phone)
+        width: 50% !important
+    
 
     
