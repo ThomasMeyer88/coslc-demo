@@ -18,7 +18,9 @@ export class DonateComponent implements OnInit {
   adrLn1 = `5323 Blanco Road`;
   adrLn2 = `San Antonio, TX 78216`;
   onlineOpt1 = `Online via Faithstreet`;
-  onlineOpt2 = `Online via Paypal`
+  onlineOpt2 = `Online via Paypal`;
+  opt1URL = `https://www.faithstreet.com/church/christ-our-savior-lutheran-church-san-antonio-tx-f1d0b97b-be74-4316-ae5a-d7a428d6d34b/giving`;
+  opt2URL = `https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=UBCHEW796G8TW`;
   ngOnInit(): void {
   }
 
