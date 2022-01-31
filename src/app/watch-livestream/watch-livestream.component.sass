@@ -12,11 +12,15 @@ p
 iframe
     @include watchWidth()
     margin-top: 1.5em
+    @media screen and (max-width: $bp-phone)
+        width: 100%
+        padding-left: 0%
+        padding: 0%
 
 table
     border-collapse: collapse
     width: 100%
-    margin-top: 1.5em
+    margin-top: 1em
 
 table tbody
     border: solid 1px $tableBorderColor
@@ -25,3 +29,16 @@ table td
     border-right: solid 1px $tableBorderColor
     font-size: 0.875rem
     line-height: 1.75em
+
+table th, table td
+    padding: 0.8125rem 1.25rem
+
+.watchTable table tbody
+    border: solid 1px $tableBorderColor
+    border-width: 1px
+
+.watchTable tr:nth-child(even)
+    background-color: $tableAltBgColor
+
+.watchTable tr
+    border-bottom: solid 1px $tableBorderColor
