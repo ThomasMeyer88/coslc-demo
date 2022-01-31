@@ -1,1 +1,67 @@
-<p>join-us works!</p>
+<div>
+    <p>
+        <strong class="header">
+            {{joinUsHeader}}
+        </strong>
+   </p>
+    <p>
+        {{joinUsText}}
+    </p>
+    <p>
+        <strong class="subheader">
+            {{serviceHoursHeader}}
+        </strong>
+    </p>
+    <app-service-hours></app-service-hours>
+    <p>
+        <strong class="subheader">
+            {{directionsHeader}}
+        </strong>
+    </p>
+    <table div class="watchTable">
+        <tbody>
+            <tr>
+                <td class="textTd">
+                    <strong>
+                        {{dirChurchName}}
+                    </strong>
+                    <br>
+                    {{dirAdLn1}}
+                    <br>
+                    {{dirAdLn2}}
+                    <br>
+                    <br>
+                    <strong>
+                        Church Office:
+                    </strong>
+                        {{phone}}
+                    <br>
+                    <strong>
+                        Fax:
+                    </strong>
+                    {{fax}}
+                    <br>
+                    <strong>
+                        Email:
+                    </strong>
+                    {{email}}
+                    <br>
+                    <strong>
+                        Web:
+                    </strong>
+                        {{web}}         
+                </td>
+                <td class="tableMap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6945.104988033016!2d-98.508113!3d29.500251!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x33dc817f7775dea1!2sChrist%20Our%20Savior%20Lutheran%20Church!5e0!3m2!1sen!2sus!4v1643663219226!5m2!1sen!2sus" 
+                            width="400" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                    </iframe>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

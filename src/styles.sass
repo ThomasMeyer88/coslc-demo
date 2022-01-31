@@ -7,6 +7,7 @@ $secondarycolor: #313131
 $footercolor: #7a7162
 $footerTextColor: #E4DBCD
 $alertcolor: #f78da7
+$alertAltColor: #df442a
 $linkColor: #058dd1
 $tableBorderColor: #dadada
 $tableAltBgColor: #eeee
@@ -19,6 +20,8 @@ $fs-header-med: 1.25rem
 
 a
     color: $linkColor
+a:hover
+    color: $alertAltColor
 
 @mixin primary-text($color: $secondarycolor)
     color: $color
@@ -91,7 +94,7 @@ body
 
 .subheader
     font-size: $fontsize-primary
-
+    
 @mixin subSectionDiv()
     display: inline-block
     width: 100%

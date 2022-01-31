@@ -1,0 +1,57 @@
+@import '../../styles'
+
+div
+    @include subSectionDiv()
+
+p
+    @include subSectionP()
+
+::ng-deep app-service-hours > table
+    margin-top: 2em !important
+
+table
+    border-collapse: collapse
+    width: 100%
+    margin-top: 1em
+    table-layout: fixed
+
+table tbody
+    border: solid 1px $tableBorderColor
+    border-width: 1px
+table td
+    border-right: solid 1px $tableBorderColor
+    font-size: 0.875rem
+    line-height: 1.75em
+
+table th, table td
+    padding: 0.8125rem 1.25rem
+
+.watchTable table tbody
+    border: solid 1px $tableBorderColor
+    border-width: 1px
+
+.watchTable tr:nth-child(even)
+    background-color: $tableAltBgColor
+
+.watchTable tr
+    border-bottom: solid 1px $tableBorderColor
+
+td
+    width: 50%
+
+
+.textTd
+    vertical-align: top
+    text-align: left
+
+.tableMap
+    vertical-align: inherit
+    text-align: center
+
+.tableMap > iframe
+    @media screen and (max-width: $bp-tablet)
+        height: 350px
+        width: 300px
+    @media screen and (max-width: $bp-phone)
+        height: 250px
+        width: 120px
