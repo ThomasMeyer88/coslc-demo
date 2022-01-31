@@ -19,12 +19,12 @@ export class StaffComponent implements OnInit {
     { title: `Pastor`,
       name: `Dan Mueller`,
       bio: ``,
-      photo: `../../assets/img/pastor`},
+      photo: `assets/img/pastor.jpg`},
     {
       title: `Organist`,
       name: `Sharon Hudkins`,
       bio: ``,
-      photo: `../../assets/img/organist`
+      photo: `assets/img/organist.jpg`
     }
   ]
 

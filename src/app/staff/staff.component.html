@@ -5,7 +5,7 @@
         </strong>
    </p>
    <div *ngFor='let emp of employees'>
-       <img url={{emp.photo}}>
+       <img [src]="emp?.photo">
        <p>
            <strong>
                {{emp?.title}}
