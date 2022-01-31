@@ -1,1 +1,36 @@
-<p>donate works!</p>
+<div>
+    <p class="verseContent">
+        <strong class="verseText">
+            {{verse}}
+        </strong>
+        <br>
+        {{verseSource}}
+   </p>
+   <p [innerHTML]="giveText">
+   </p>
+   <p>
+        <strong class="subheader">
+            {{givePhysicalHeader}}
+        </strong>
+        <br>
+        <br>
+        Please make your check/payment payable to:
+        <br>
+        <br>
+        {{churchName}}
+        <br>
+        {{adrLn1}}
+        <br>
+        {{adrLn2}}
+   </p>
+   <p>
+       <strong class="subheader">
+           {{onlineOpt1}}
+       </strong>
+   </p>
+   <p>
+       <strong class="subheader">
+           {{onlineOpt2}}
+       </strong>
+   </p>
+</div>
