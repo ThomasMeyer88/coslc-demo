@@ -1,1 +1,19 @@
-<p>staff works!</p>
+<div>
+    <p>
+        <strong class="header">
+            {{staffHeader}}
+        </strong>
+   </p>
+   <div *ngFor='let emp of employees'>
+       <img url={{emp.photo}}>
+       <p>
+           <strong>
+               {{emp?.title}}
+           </strong>
+           - {{emp?.name}}
+       </p>
+       <p>
+           {{emp?.bio}}
+       </p>
+   </div>
+</div>
