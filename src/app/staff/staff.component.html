@@ -4,16 +4,20 @@
             {{staffHeader}}
         </strong>
    </p>
-   <div *ngFor='let emp of employees'>
-       <img [src]="emp?.photo">
-       <p>
-           <strong>
-               {{emp?.title}}
-           </strong>
-           - {{emp?.name}}
-       </p>
-       <p>
-           {{emp?.bio}}
-       </p>
+   <div *ngFor='let emp of employees' class="row">
+       <div class="img-col">
+            <img [src]="emp?.photo">
+       </div>
+       <div class="text-col">
+            <p>
+                <strong>
+                    {{emp?.title}}
+                </strong>
+                - {{emp?.name}}
+            </p>
+            <p>
+                {{emp?.bio}}
+            </p>
+        </div>    
    </div>
 </div>

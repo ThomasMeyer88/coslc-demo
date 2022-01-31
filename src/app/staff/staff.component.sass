@@ -2,6 +2,52 @@
 
 div
     @include subSectionDiv()
+    
 
 p
     @include subSectionP()
+    line-height: 1.75em
+
+@mixin phoneMargin
+    margin: 0
+.row 
+    float: left
+    @media screen and (max-width: $bp-phone)
+        @include phoneMargin
+        width: 100%
+    img
+        margin-top: 7em
+        @media screen and (max-width: $bp-phone)
+            margin-top: 0
+            display: block
+            margin-left: auto
+            margin-right: auto
+
+
+.img-col
+    width: 20%
+    vertical-align: top
+    @media screen and (max-width: $bp-tablet)
+        width: 30%
+    @media screen and (max-width: $bp-phone)
+        @include phoneMargin
+        width: 100%
+        
+.text-col
+    width: 80%
+    @media screen and (max-width: $bp-tablet)
+        width: 70%
+    @media screen and (max-width: $bp-phone)
+        @include phoneMargin
+        width: 100%
+        > p
+            max-height: 200px
+            overflow-x: scroll
+            text-align: left
+            margin-top: 1em
+        > p:nth-child(1)
+            text-align: center
+
+
+    
+    
