@@ -15,23 +15,31 @@
             <tr>
                 <td>
                     <strong>
-                        Sunday Worship Services
+                    {{primaryServiceText}}
                     </strong>
                 </td>
                 <td>
-                    Sundays at 10:30 AM (Central)
+                    {{primaryServiceTime}}
                 </td>
             </tr>
             <tr>
                 <td>
                     <strong>
-                        Advent &amp; Lent Season
+                    {{specialServiceText}}
                     </strong>
                 </td>
                 <td>
-                    Wednesdays at 7:00 PM (Central)
+                    {{specialServiceTime}}
                 </td>
             </tr>
         </tbody>
     </table>
+
+    <p>
+        <strong class="subheader">
+            {{interactHeaderText}}
+        </strong>
+   </p>
+   <p [innerHTML]="interactText">
+   </p>
 </div>
