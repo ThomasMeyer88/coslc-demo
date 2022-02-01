@@ -23,10 +23,7 @@
         <div class="col-3">
             {{member?.name}}
         </div>
-        <div class="col-3" *ngIf="member?.phone?.length === 11">
-            {{member?.phone?.substring(0,1)}}-{{member?.phone?.substring(1,4)}}-{{member?.phone?.substring(4,7)}}-{{member?.phone?.substring(7,10)}}
-        </div>
-        <div class="col-3" *ngIf="member?.phone?.length === 10">
+        <div class="col-3">
             {{member?.phone?.substring(0,3)}}-{{member?.phone?.substring(3,6)}}-{{member?.phone?.substring(6,10)}}
         </div>
         <div class="col-4">
@@ -40,14 +37,14 @@
         <mat-form-field class="col-3">
             <mat-label>Name</mat-label>
             <input type="text" matInput formControlName="name" placeholder="Name" required minlength="5"
-              maxlength="30">
+              maxlength="30" required>
             <mat-error *ngIf="signIn.controls.name?.hasError('required')">
               Name is <strong>required</strong>
             </mat-error>
         </mat-form-field>
         <mat-form-field class="col-3">
             <mat-label>Phone Number</mat-label>
-            <input type="tel" matInput formControlName="phone" placeholder="0123456789" minlength="10" maxlength="11">
+            <input type="tel" matInput formControlName="phone" placeholder="0123456789" minlength="10" maxlength="10">
             <mat-error *ngIf="signIn.controls.phone?.invalid">
                 Please enter a valid phone number or leave this field blank
               </mat-error>
@@ -61,10 +58,9 @@
         </mat-form-field>
         <mat-form-field class="col-2">
             <mat-label>Status</mat-label>
-            <mat-select formControlName="status" required>
-                <mat-option *ngFor="let opt of memberOptions" [value]="opt">
-                  {{opt}}
-                </mat-option>
+            <mat-select formControlName="status" required [(value)]="selected">
+                <mat-option selected value='Visitor'>Visitor</mat-option>
+                <mat-option value='Member'>Member</mat-option>
             </mat-select>
         </mat-form-field>
         <button mat-raised-button color="primary" type="submit" 

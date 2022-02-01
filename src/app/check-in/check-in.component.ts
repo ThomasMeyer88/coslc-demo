@@ -20,7 +20,7 @@ export class CheckInComponent implements OnInit {
     status: new FormControl('', Validators.required)
   });
 
-  memberOptions: string[] = [`Member`, `Visitor`];
+  selected = 'Visitor';
   
   dateService = new dateService;
   
@@ -33,6 +33,7 @@ export class CheckInComponent implements OnInit {
 
   ngOnInit(): void {
     this.checkInHeader += `${this.dateService.weekDay}, ${this.dateService.dateMDY}`;
+    this.signIn.get('status').setValue('Visitor');
   }
 
   async onSubmit() {
@@ -43,6 +44,14 @@ export class CheckInComponent implements OnInit {
       status: this.signIn.value.status
     };
     this.members.push(member);
+    this.clearForm();
+  }
+
+  clearForm() {
+    this.signIn.reset();
+
+    this.signIn.get('status').setValue('Visitor');
+    console.log(this.signIn.dirty);
   }
 
 }
