@@ -4,4 +4,33 @@
             {{checkInHeader}}
         </strong>
    </p>
+   <div class="col-12 row listHeader">
+        <div class="col-3">
+            Name
+        </div>
+        <div class="col-3">
+            Number
+        </div>
+        <div class="col-4">
+            E-Mail
+        </div>
+        <div class="col-2">
+            Status
+        </div>
+   </div>
+   <div class="col-12 row listHeader" 
+        *ngFor="let member of members">
+        <div class="col-3">
+            {{member?.name}}
+        </div>
+        <div class="col-3">
+            {{member?.phone?.substring(0,1)}}-{{member?.phone?.substring(1,4)}}-{{member?.phone?.substring(4,7)}}-{{member?.phone?.substring(7,10)}}
+        </div>
+        <div class="col-4">
+            {{member?.email}}
+        </div>
+        <div class="col-2">
+            {{member?.status}}
+        </div>
+   </div>
 </div>

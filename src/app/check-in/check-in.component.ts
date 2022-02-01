@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { dateService } from '../services/dateService';
+import { member } from '../types/member';
 
 @Component({
   selector: 'app-check-in',
@@ -10,7 +11,13 @@ export class CheckInComponent implements OnInit {
 
   constructor(
   ) { }
+
   dateService = new dateService;
+  
+  members: member[] = [
+    {name: `Susan Meyer`, phone: `0123456789`, email: `susanmeyer@gmail.com`, status: `Member`},
+    {name: `Indiana Jones`, phone: null, email: null, status: `Guest`}
+  ]
 
   checkInHeader = `Service Sign In For `;
 
