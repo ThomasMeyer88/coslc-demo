@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { dateService } from '../services/dateService';
 import { member } from '../types/member';
 
@@ -12,17 +13,36 @@ export class CheckInComponent implements OnInit {
   constructor(
   ) { }
 
+  signIn= new FormGroup({
+    email: new FormControl('', [Validators.email]),
+    name: new FormControl('', Validators.required),
+    phone: new FormControl(''),
+    status: new FormControl('', Validators.required)
+  });
+
+  memberOptions: string[] = [`Member`, `Visitor`];
+  
   dateService = new dateService;
   
   members: member[] = [
     {name: `Susan Meyer`, phone: `0123456789`, email: `susanmeyer@gmail.com`, status: `Member`},
-    {name: `Indiana Jones`, phone: null, email: null, status: `Guest`}
+    {name: `Indiana Jones`, phone: null, email: null, status: `Visitor`}
   ]
 
   checkInHeader = `Service Sign In For `;
 
   ngOnInit(): void {
     this.checkInHeader += `${this.dateService.weekDay}, ${this.dateService.dateMDY}`;
+  }
+
+  async onSubmit() {
+    let member: member = {
+      name: this.signIn.value.name,
+      email: this.signIn.value.email,
+      phone: this.signIn.value.phone,
+      status: this.signIn.value.status
+    };
+    this.members.push(member);
   }
 
 }

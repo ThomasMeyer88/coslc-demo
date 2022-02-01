@@ -6,8 +6,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule} from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import { HttpClientModule } from '@angular/common/http'
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -54,6 +56,10 @@ import { CheckInComponent } from './check-in/check-in.component';
     BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
