@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { CheckInComponent } from './check-in/check-in.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'donate', component: DonateComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'register', component: SignUpComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'checkin', component: CheckInComponent}
 ];
 
 @NgModule({

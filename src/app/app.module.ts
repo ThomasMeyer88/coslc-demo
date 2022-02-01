@@ -26,6 +26,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { ServiceHoursComponent } from './service-hours/service-hours.component';
+import { CheckInComponent } from './check-in/check-in.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ServiceHoursComponent } from './service-hours/service-hours.component';
     LoginComponent,
     HomeComponent,
     FooterComponent,
-    ServiceHoursComponent
+    ServiceHoursComponent,
+    CheckInComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,7 @@ import { ServiceHoursComponent } from './service-hours/service-hours.component';
     MatMenuModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
