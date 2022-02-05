@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { User } from '../types/user';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor() { }
+  error: Boolean = false;
+  errorMessage: string;
+
+  createUser = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', [Validators.required, Validators.pattern('((?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,30})')]),
+    confirmPassword: new FormControl('', Validators.required)
+  });
+
+  constructor () {}
 
   ngOnInit(): void {
   }
+
+  async onSubmit() {
+    let user: User = 
+          {   username: this.createUser.value.username,
+              email: this.createUser.value.email,
+              password: this.createUser.value.password,
+              id: null
+          };
+    console.log(user);
+  }
+
+  passwordsMatch() {
+    return this.createUser.value.password === this.createUser.value.confirmPassword;
+  }
+
 
 }
