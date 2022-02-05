@@ -51,7 +51,9 @@ export class CheckInComponent implements OnInit {
     this.signIn.reset();
 
     this.signIn.get('status').setValue('Visitor');
-    console.log(this.signIn.dirty);
+    Object.keys(this.signIn.controls).forEach(key => {
+      this.signIn.get(key).setErrors(null) ;
+    });
   }
 
 }
