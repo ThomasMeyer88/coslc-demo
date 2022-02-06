@@ -10,8 +10,8 @@ import { User } from '../types/user';
 export class SignUpComponent implements OnInit {
 
   submitted: Boolean = false;
-  submittedEmail: string = '';
-  submittedText: string = `Account submission successful.  Please check your email address at ${this.submittedEmail} for further details.`;
+  submittedText: string = 
+    `Account submission successful.  Please check your email for further details.`;
   error: Boolean = false;
   errorMessage: string;
 
@@ -34,7 +34,7 @@ export class SignUpComponent implements OnInit {
               password: this.createUser.value.password,
               id: null
           };
-    this.submittedEmail = `${user.email}`;
+    this.submitted = true;
   }
 
   passwordsMatch() {
