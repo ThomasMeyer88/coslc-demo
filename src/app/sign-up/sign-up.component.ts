@@ -13,7 +13,7 @@ export class SignUpComponent implements OnInit {
   submittedText: string = 
     `Account submission successful.  Please check your email for further details.`;
   error: Boolean = false;
-  errorMessage: string;
+  errorMessage: string = ``;
 
   createUser = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
